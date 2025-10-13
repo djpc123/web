@@ -3,6 +3,8 @@
 # To get started with Nuxt see: https://nuxtjs.org/docs/get-started/installation
 #
 name: PR Build
+permissions:
+  contents: read
 
 on:
   pull_request:
