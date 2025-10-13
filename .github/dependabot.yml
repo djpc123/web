@@ -9,13 +9,12 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-    # Group for major version updates
     groups:
+      # Group for major version updates
       major-updates:
         patterns: ["*"]
         update-types: [ "version-update:semver-major" ]
-    # Group for minor and patch updates
-    groups:
+      # Group for minor and patch updates
       minor-patch-updates:
         patterns: ["*"]
         update-types: [ "version-update:semver-minor", "version-update:semver-patch" ]
