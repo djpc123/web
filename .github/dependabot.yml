@@ -12,10 +12,10 @@ updates:
     groups:
       major-updates:
         patterns: ["*"]
-        update-types: [ "version-update:semver-major" ]
+        update-types: [ "major" ]
       minor-patch-updates:
         patterns: ["*"]
-        update-types: [ "version-update:semver-minor", "version-update:semver-patch" ]
+        update-types: [ "minor", "patch" ]
 
   - package-ecosystem: "github-actions"
     directory: "/"
