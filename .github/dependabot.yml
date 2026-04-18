@@ -1,23 +1,23 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
 version: 2
 updates:
+  # Maintain dependencies for the Nuxt project
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    # Grouping keeps your PR list clean by combining related updates
     groups:
-      major-updates:
+      dependencies:
         patterns: ["*"]
-        update-types: [ "major" ]
-      minor-patch-updates:
-        patterns: ["*"]
-        update-types: [ "minor", "patch" ]
+        # Group everything into one monthly PR to minimize noise
+        update-types: ["minor", "patch"]
+    open-pull-requests-limit: 5
 
+  # Maintain GitHub Actions versions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    groups:
+      actions:
+        patterns: ["*"]
